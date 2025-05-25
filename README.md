@@ -1,4 +1,4 @@
-# GenAI24‑NIST Text‑to‑Text Pipeline 📝
+# NIST GenAI Text‑to‑Text Pipeline 📝
 
 Comprehensive solution for the **NIST GenAI24 Text‑to‑Text** task.
 
