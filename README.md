@@ -77,16 +77,24 @@ Use it for **exploratory runs, debugging and quick demos**, rather than head‑l
 
 ## 2 · Discriminators
 
-### 🔸 2.1 `Active Learning.ipynb` — GPT‑Assisted Reviewer
+### 🔸 2.1 `Self training.ipynb` 
 
-A notebook that:
+### 🔸 2.1 `Active Learning.ipynb` — Manual Discriminator Feedback Interface
 
-1. Loads generator outputs  
-2. Calls **GPT‑4** for coherence, redundancy, toxicity scores  
-3. Flags low‑quality summaries for human attention  
-4. Optionally augments training data
+This notebook implements a **manual feedback loop** for reviewing and improving AI/Human classification results from multiple models (e.g., BERT and RoBERTa).
 
-Acts as a **semi‑automatic discriminator**.
+Features:
+
+- Loads and aligns predictions from two different models  
+- Displays **confidence scores and labels** for each summary  
+- Highlights disagreements or low-confidence predictions  
+- Provides an interface to **manually label or confirm** the final decision  
+- Optionally records decisions to improve future training data
+
+This tool helps simulate an **active learning process** where human reviewers guide the refinement of discriminator labels.
+
+> No model training or inference is done here — it is a **human-in-the-loop evaluator** powered by precomputed model outputs.
+
 
 ---
 
