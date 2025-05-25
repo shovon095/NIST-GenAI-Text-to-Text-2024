@@ -21,6 +21,7 @@ repo/Discriminator
 ├── discriminator_format.ipynb # Visualization and format testing for discrimination outputs
 └── outputs/
 └── results.csv # AI/Human predictions
+```
 ---
 
 ## ✨ At a Glance
