@@ -29,8 +29,8 @@ repo/Discriminator
 | Category        | Module(s)                           | Highlights                                   |
 |-----------------|-------------------------------------|----------------------------------------------|
 | **Generator 1** | `updated_a2c.py`                    | Actor‑Critic RL, human‑like enhancements, XML writer |
-| **Generator 2** | `generation_updated.ipynb`          | Top‑k / Top‑p / Temp sampling exploration    |
-| **Discriminator 1** | `Active Learning.ipynb`         | GPT‑4 review & manual filtering              |
+| **Generator 2** | `generation_updated.ipynb`          | Pyscholinguitsic Adjustment with GPT-4o    |
+| **Discriminator 1** | `Active Learning.ipynb`         | Self training with BERT and RoBERTa             |
 | **Discriminator 2** | `gen.py` (+ `pred.py`)          | RoBERTa classifier (train & inference)       |
 
 ---
