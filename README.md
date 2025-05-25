@@ -7,17 +7,18 @@ Comprehensive solution for the **NIST GenAI24 Text‑to‑Text** task.
 ## 📁 Repository Layout
 
 ```
-repo/
+repo/Generator
 ├── updated_a2c.py                # Generator 1 – Actor‑Critic RL
 ├── generation_updated.ipynb      # Generator 2 – Sampling & fluency
-│
+├── xml_cleanup.ipynb
+└── outputs/
+    ├── summaries.xml
+repo/Discriminator
 ├── Active Learning.ipynb         # Discriminator 1 – GPT‑assisted reviewer
 ├── gen.py                        # Discriminator 2 – RoBERTa train / test
 ├── pred.py                       # Helper for gen.py inference
-│
-├── xml_cleanup.ipynb             # Utility: clean NIST XML (optional)
+├── discriminator_format.ipynb
 └── outputs/
-    ├── summaries.xml             # Final XML submission
     └── results.csv               # AI/Human predictions
 ```
 
@@ -61,13 +62,13 @@ Key output files:
 
 ### 🔹 1.2 `generation_updated.ipynb` — Interactive Generator Notebook
 
-This Jupyter notebook is an **interactive wrapper** around the core pipeline.  
-It lets you:
+| Technique                        | What it does                                                                                                                            |
+| -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| **Back-translation pipeline**    | Sends each draft summary through an intermediate language (e.g. French → English) to introduce natural word order changes and idioms.   |
+| **GPT-based paraphrasing**       | Calls `gpt-3.5-turbo` to rephrase sentences with configurable temperature and top-p.                                                    |
+| **Role-aware rewriting**         | Extracts key **Subjects / Verbs / Objects** with spaCy, then injects them into prompts so the paraphrased text preserves factual roles. |
+| **Rhetorical & hedge additions** | Adds analogies, hedge words (“perhaps”, “might”) and temporal markers to mimic human narrative flow.                                    |
 
-- Load the same article/topic dataset used by `updated_a2c.py`
-- Tweak generation parameters (e.g., max tokens, number of chunks, paraphrasing flags)
-- Manually inspect intermediate chunks and summaries
-- Export a `summaries.xml` preview without rerunning full RL training
 
 Open it in JupyterLab / VS Code, run the cells sequentially, and adjust the cells marked **“🔧 Parameters”** to experiment with different settings.
 
