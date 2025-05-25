@@ -91,10 +91,6 @@ Features:
 - Provides an interface to **manually label or confirm** the final decision  
 - Optionally records decisions to improve future training data
 
-This tool helps simulate an **active learning process** where human reviewers guide the refinement of discriminator labels.
-
-> No model training or inference is done here — it is a **human-in-the-loop evaluator** powered by precomputed model outputs.
-
 
 ---
 
