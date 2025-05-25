@@ -15,7 +15,7 @@ repo/Generator
     └── summaries.xml            # Final XML-formatted summaries for NIST
 
 repo/Discriminator
-├── Active Learning.ipynb        # Discriminator 1 – GPT-assisted reviewer (manual filtering)
+├── Active Learning.ipynb        # Discriminator 1 – Self-training with human in the loop using BERT and RoBERTa
 ├── gen.py                       # Discriminator 2 – RoBERTa trainer & evaluator
 ├── pred.py                      # Inference helper for gen.py
 ├── discriminator_format.ipynb  # Visualization and format testing for discrimination outputs
