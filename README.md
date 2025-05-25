@@ -8,20 +8,19 @@ Comprehensive solution for the **NIST GenAI24 Text‑to‑Text** task.
 
 ```
 repo/Generator
-├── updated_a2c.py                # Generator 1 – Actor‑Critic RL
-├── generation_updated.ipynb      # Generator 2 – Sampling & fluency
-├── xml_cleanup.ipynb
+├── updated_a2c.py # Generator 1 – Actor-Critic RL
+├── generation_updated.ipynb # Generator 2 – Paraphrasing, Role-aware Back-Style
+├── xml_cleanup.ipynb # Cleans and verifies NIST XML output
 └── outputs/
-    ├── summaries.xml
-repo/Discriminator
-├── Active Learning.ipynb         # Discriminator 1 – GPT‑assisted reviewer
-├── gen.py                        # Discriminator 2 – RoBERTa train / test
-├── pred.py                       # Helper for gen.py inference
-├── discriminator_format.ipynb
-└── outputs/
-    └── results.csv               # AI/Human predictions
+└── summaries.xml # Final XML-formatted summaries for NIST
 ```
-
+repo/Discriminator
+├── Active Learning.ipynb # Discriminator 1 – GPT-assisted reviewer (manual filtering)
+├── gen.py # Discriminator 2 – RoBERTa trainer & evaluator
+├── pred.py # Inference helper for gen.py
+├── discriminator_format.ipynb # Visualization and format testing for discrimination outputs
+└── outputs/
+└── results.csv # AI/Human predictions
 ---
 
 ## ✨ At a Glance
