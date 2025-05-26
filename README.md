@@ -79,8 +79,6 @@ Use it for **exploratory runs, debugging and quick demos**, rather than head‑l
 
 ### 🔸 2.1 `Self training.ipynb` 
 
-### 🔸 2.1 `Active Learning.ipynb` — Manual Discriminator Feedback Interface
-
 This notebook implements a **manual feedback loop** for reviewing and improving AI/Human classification results from multiple models (e.g., BERT and RoBERTa).
 
 Features:
